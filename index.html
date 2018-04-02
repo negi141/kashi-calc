@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>‘İ‚µØ‚èŒvZ</title>
+<title>è²¸ã—å€Ÿã‚Šè¨ˆç®—</title>
 <meta charset="utf-8">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="js/out.js"></script>
@@ -29,18 +29,18 @@ p {
 $(function(){
 	//console.log();
 	//$("#").val()
-	//ƒfƒUƒCƒ“‰Šú‰»
+	//ãƒ‡ã‚¶ã‚¤ãƒ³åˆæœŸåŒ–
 	$("#divList").css("color", "#88c");
 	$("#divDest").css("color", "#00f");
 	$("#divDest").css("background-color", "#ffd");
 	//$("div").css("padding-left", "10px");
 	$("#calc_money").css("width", "80px");
 	$("#money").css("width", "80px");
-	//•Ï”‰Šú‰»
+	//å¤‰æ•°åˆæœŸåŒ–
 	var items = new Array();
-	var users = ["ªŠİ","‹e’r","‹Ä"];
+	var users = ["æ ¹å²¸","èŠæ± ","å°­"];
 
-	//‰Šú‰»
+	//åˆæœŸåŒ–
 	var init = function(){
 		for (var i=0 ; i<users.length ; i++){
 			$('#kariname').append($('<option>').html(users[i]).val(users[i]));
@@ -48,7 +48,7 @@ $(function(){
 		}
 	}
 	init();
-	//’Ç‰ÁƒCƒxƒ“ƒg
+	//è¿½åŠ ã‚¤ãƒ™ãƒ³ãƒˆ
 	$('#buttonDiv2').click(function (){
 		calc(2);
 	});
@@ -56,25 +56,25 @@ $(function(){
 		calc(3);
 	});
 	$('#buttonAdd').click(function (){
-		//ƒGƒ‰[ƒ`ƒFƒbƒN
+		//ã‚¨ãƒ©ãƒ¼ãƒã‚§ãƒƒã‚¯
 		if ($("#kariname").val() == null || $("#kashiname").val() == null)
 		{
-			alert("–¼‘O‚ğ‘I‘ğ‚µ‚Ä‚­‚¾‚³‚¢");
+			alert("åå‰ã‚’é¸æŠã—ã¦ãã ã•ã„");
 			return;
 		}
 		if ($("#kariname").val()+"" === $("#kashiname").val()+"")
 		{
-			alert("–¼‘O‚ğ¶‰E‚Å•Ï‚¦‚Ä‚­‚¾‚³‚¢");
+			alert("åå‰ã‚’å·¦å³ã§å¤‰ãˆã¦ãã ã•ã„");
 			return;
 		}
 		if ($("#money").val() == "")
 		{
-			alert("‰~‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+			alert("å††ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„");
 			return;
 		}
 		if (isNaN($("#money").val()) == true)
 		{
-			alert("‰~‚Í”š‚É‚µ‚Ä‚­‚¾‚³‚¢");
+			alert("å††ã¯æ•°å­—ã«ã—ã¦ãã ã•ã„");
 			return;
 		}
 		var item = {"itemname": $("#itemname").val(), "kariname":$("#kariname").val()+"", "kashiname":$("#kashiname").val()+"", "money":$("#money").val()}//
@@ -82,18 +82,18 @@ $(function(){
 		listshow();
 		destshow();
 	})
-	//ƒAƒCƒeƒ€ƒŠƒXƒg•\¦
+	//ã‚¢ã‚¤ãƒ†ãƒ ãƒªã‚¹ãƒˆè¡¨ç¤º
 	var listshow = function(){
 		var message = "";
 		for (var i=0 ; i<items.length ; i++){
-			message += Format("{0}‚É‚Â‚¢‚ÄA{1}‚Í{2}‚É{3}‰~•Ô‚·<br/>", items[i].itemname, items[i].kariname, items[i].kashiname, items[i].money);
+			message += Format("{0}ã«ã¤ã„ã¦ã€{1}ã¯{2}ã«{3}å††è¿”ã™<br/>", items[i].itemname, items[i].kariname, items[i].kashiname, items[i].money);
 		}
 		$("#divList").html(message)
 	}
-	//WŒv
+	//é›†è¨ˆ
 	var destshow = function(){
 		var message = "";
-		//Ø‚è‚ğ‰Šú‰»
+		//å€Ÿã‚Šã‚’åˆæœŸåŒ–
 		var kari = new Array();
 		for (var i=0 ; i<users.length ; i++){
 			kari[users[i]] = new Array();
@@ -101,7 +101,7 @@ $(function(){
 				kari[users[i]][users[j]] = 0;
 			}
 		}
-		//‘ŠE‚µ‚Â‚Â—İŒv‚ğŒvZ
+		//ç›¸æ®ºã—ã¤ã¤ç´¯è¨ˆã‚’è¨ˆç®—
 		for (var i=0 ; i<items.length ; i++){
 			var money = parseInt(items[i].money);
 			if (kari[items[i].kashiname][items[i].kariname] >= money)
@@ -109,16 +109,16 @@ $(function(){
 			else
 				kari[items[i].kariname][items[i].kashiname] += money;
 		}
-		//o—Í
+		//å‡ºåŠ›
 		for (var key1 in kari){
 			for (var key2 in kari[key1]){
 				if (kari[key1][key2] != 0)
-					message += Format("{0}‚Í{1}‚É{2}‰~•Ô‚·<br/>", key1, key2, kari[key1][key2]);
+					message += Format("{0}ã¯{1}ã«{2}å††è¿”ã™<br/>", key1, key2, kari[key1][key2]);
 			}
 		}
 		$("#divDest").html(message)
 	}
-	//Š„‚èZ
+	//å‰²ã‚Šç®—
 	var calc = function(div){
 		$("#calc_dest").val(Math.round($("#calc_money").val() / div));
 	}
@@ -128,48 +128,48 @@ $(function(){
 </head>
 <body>
 <div class="container">
-	<!--ƒwƒbƒ_[-->
+	<!--ãƒ˜ãƒƒãƒ€ãƒ¼-->
    <div id="header">
-		<pre><b>ƒg‚¢•û„</b>
-’N‚ª’N‚ÉŠô‚ç•Ô‚·‚Æ‚¢‚¤î•ñ‚ğ‚Ç‚ñ‚Ç‚ñ’Ç‰Á‚µ‚Ä‚¢‚¯‚ÎAWŒv‚µ‚Ä‚­‚ê‚éB
-Š„‚èZ‚µ‚â‚·‚¢‚æ‚¤‚ÉŒvZ‹@‚ğ‚Â‚¯‚Ä‚¨‚¢‚½B</pre>
+		<pre><b>ï¼œä½¿ã„æ–¹ï¼</b>
+èª°ãŒèª°ã«å¹¾ã‚‰è¿”ã™ã¨ã„ã†æƒ…å ±ã‚’ã©ã‚“ã©ã‚“è¿½åŠ ã—ã¦ã„ã‘ã°ã€é›†è¨ˆã—ã¦ãã‚Œã‚‹ã€‚
+å‰²ã‚Šç®—ã—ã‚„ã™ã„ã‚ˆã†ã«è¨ˆç®—æ©Ÿã‚’ã¤ã‘ã¦ãŠã„ãŸã€‚</pre>
    </div>
    <div class="row">
-   		<!--ƒƒCƒ“ƒJƒ‰ƒ€-->
+   		<!--ãƒ¡ã‚¤ãƒ³ã‚«ãƒ©ãƒ -->
        <div class="span8 content" style="">
-		<p>‘İ‚µ‚ğ’Ç‰Á</p>
+		<p>è²¸ã—ã‚’è¿½åŠ </p>
 		<div>
 			<input id="itemname" type="text"/>
-			‚É‚Â‚¢‚ÄA
+			ã«ã¤ã„ã¦ã€
 			<select id="kariname" multiple="true" size="3" style="width:80px" onchange="selectedIndex=selectedIndex;"></select>
-			‚Í
+			ã¯
 			<select id="kashiname" multiple="true" size="3" style="width:80px" onchange="selectedIndex=selectedIndex;"></select>
-			‚É
-			<input id="money" type="text"/>‰~•Ô‚·
+			ã«
+			<input id="money" type="text"/>å††è¿”ã™
 
-			<input type="button" id ="buttonAdd" class="btn btn-primary" value="’Ç‰Á"/>
+			<input type="button" id ="buttonAdd" class="btn btn-primary" value="è¿½åŠ "/>
 		</div>
 
-		<p>WŒvŒ‹‰Ê(‘ŠEÏ‚İ)</p>
+		<p>é›†è¨ˆçµæœ(ç›¸æ®ºæ¸ˆã¿)</p>
 		<div id="divDest"></div>
 
-		<p>‘İ‚µˆê——</p>
+		<p>è²¸ã—ä¸€è¦§</p>
 		<div id="divList"></div>
        </div>
        
-       <!--‰EƒJƒ‰ƒ€-->
+       <!--å³ã‚«ãƒ©ãƒ -->
        <div class="span4 content">
-       	<p>Š„‚èZ(‚¨‚Ü‚¯)</p>
+       	<p>å‰²ã‚Šç®—(ãŠã¾ã‘)</p>
 		<div align="center">
-			<input id="calc_money" type="text"/>‰~‚ğ<br/>
-			<input type="button" id ="buttonDiv2" class="btn" value="2‚ÅŠ„‚é"/>
-			<input type="button" id ="buttonDiv3" class="btn" value="3‚ÅŠ„‚é"/><br/>
+			<input id="calc_money" type="text"/>å††ã‚’<br/>
+			<input type="button" id ="buttonDiv2" class="btn" value="2ã§å‰²ã‚‹"/>
+			<input type="button" id ="buttonDiv3" class="btn" value="3ã§å‰²ã‚‹"/><br/>
 			?<br/>
-			<input id="calc_dest" type="text"/>‰~
+			<input id="calc_dest" type="text"/>å††
 		</div>
        </div>
    </div>
-   <!--ƒtƒbƒ^[-->
+   <!--ãƒ•ãƒƒã‚¿ãƒ¼-->
    <div id="footer">
         Created by Negishi
     </div>
