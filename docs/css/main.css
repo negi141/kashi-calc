@@ -3,16 +3,25 @@ body {
 	background:#f5f5f5;
 }
 p {
-	background:#ddeeff;
 	font-weight:bold;
 }
-
+#header {
+	background: #f0f9ff;
+	border: none;
+	padding: 9px;
+	border-radius: 4px;
+	font-size: 14px;
+	box-shadow: 3px 3px 0 rgba(8, 1, 2, 0.03);
+}
 #footer {
 	text-align:center;
 	color:#999;
 }
 .content{
 	background:#FFF;
+	border: solid 1px #bbb;
+	border-radius: 5px;
+	padding: 5px;
 }
 #itemname{width:120px;}
 #divList{color:#88c}
