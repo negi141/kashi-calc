@@ -1,15 +1,8 @@
 $(function(){
 	//console.log();
 	//$("#").val()
-	//デザイン初期化
-	$("#divList").css("color", "#88c");
-	$("#divDest").css("color", "#00f");
-	$("#divDest").css("background-color", "#ffd");
-	//$("div").css("padding-left", "10px");
-	$("#calc_money").css("width", "80px");
-	$("#money").css("width", "80px");
 	//変数初期化
-	var items = new Array();
+	var items = [];
 	var users = [];
 
 	//ユーザー追加ボタン
@@ -18,14 +11,7 @@ $(function(){
 		users.push(userName);
 		$('#kariname').append($('<option>').html(userName).val(userName));
 		$('#kashiname').append($('<option>').html(userName).val(userName));
-	});
-
-	//割り算ボタン
-	$('#buttonDiv2').click(function (){
-		calc(2);
-	});
-	$('#buttonDiv3').click(function (){
-		calc(3);
+		$('#addUserName').val("");
 	});
 
 	//貸しボタン
@@ -96,4 +82,13 @@ $(function(){
 	var calc = function(div){
 		$("#calc_dest").val(Math.round($("#calc_money").val() / div));
 	}
+	
+	//割り算ボタン
+	$('#buttonDiv2').click(function (){
+		calc(2);
+	});
+	$('#buttonDiv3').click(function (){
+		calc(3);
+	});
+
 });

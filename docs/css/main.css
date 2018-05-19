@@ -6,6 +6,7 @@ p {
 	background:#ddeeff;
 	font-weight:bold;
 }
+
 #footer {
 	text-align:center;
 	color:#999;
@@ -14,3 +15,8 @@ p {
 	background:#FFF;
 }
 #itemname{width:120px;}
+#divList{color:#88c}
+#divDest{color:#00f;
+background-color:#ffd}
+#calc_money{width:80px}
+#money{width:80px}
