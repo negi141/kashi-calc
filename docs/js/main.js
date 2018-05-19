@@ -8,6 +8,11 @@ $(function(){
 	//ユーザー追加ボタン
 	$('#buttonUserAdd').click(function (){
 		var userName = $('#addUserName').val();
+		if (userName == "")
+		{
+			alert("名前を入力してください");
+			return;
+		}
 		users.push(userName);
 		$('#kariname').append($('<option>').html(userName).val(userName));
 		$('#kashiname').append($('<option>').html(userName).val(userName));
