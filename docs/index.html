@@ -27,22 +27,21 @@
 	<!--メインカラム-->
 	<div class="span8">
 		<div class="content">
-			<p>①ユーザーを追加(1名ずつ)</p>
-			<input id="addUserName" type="text"/>
-			<input type="button" id ="buttonUserAdd" class="btn btn-primary btn-sm" value="ユーザー追加"/>
+			<p>①ユーザーを1名ずつ追加する</p>
+			<input id="addUserName" type="text" placeholder="名前"/>
+			<input type="button" id ="buttonUserAdd" class="btn btn-primary btn-sm" value="追加する"/>
 		</div>
 
 		<div class="content">
-			<p>②貸しを追加</p>
-			<input id="itemname" type="text"/>
+			<p>②"貸し"を追加する</p>
+			<input id="itemname" type="text" placeholder="○○代"/>
 			について、
 			<select id="kariname" multiple="true" size="3" style="width:80px" onchange="selectedIndex=selectedIndex;"></select>
 			は
 			<select id="kashiname" multiple="true" size="3" style="width:80px" onchange="selectedIndex=selectedIndex;"></select>
 			に
-			<input id="money" type="text"/>円返す
-
-			<input type="button" id ="buttonAdd" class="btn btn-primary btn-sm" value="追加"/>
+			<input id="money" type="text" placeholder="半角数字"/>円返す
+			<input type="button" id ="buttonAdd" class="btn btn-primary btn-sm" value="追加する"/>
 		</div>
 
 		<div class="content">
