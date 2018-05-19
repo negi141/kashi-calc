@@ -15,23 +15,25 @@
 <div class="container">
 
 <!--ヘッダー-->
-<div id="header">
-	<pre><b>＜使い方＞</b>
-誰が誰に幾ら返すという情報をどんどん追加していけば、集計してくれる。
-割り算しやすいように計算機をつけておいた。</pre>
+<div class="row">
+	<div class="span12 content header">
+		<p>＜使い方＞</p>
+		誰が誰に幾ら返すという情報をどんどん追加していけば、集計してくれる。<br/>
+		割り算しやすいように計算機をつけておいた。
+	</div>
 </div>
 
 <div class="row">
 	<!--メインカラム-->
 	<div class="span8">
 		<div class="content">
-			<p>ユーザー追加</p>
+			<p>①ユーザー追加(1名ずつ)</p>
 			<input id="addUserName" type="text"/>
-			<input type="button" id ="buttonUserAdd" class="btn btn-primary" value="ユーザー追加"/>
+			<input type="button" id ="buttonUserAdd" class="btn btn-primary btn-sm" value="ユーザー追加"/>
 		</div>
 
 		<div class="content">
-			<p>貸しを追加</p>
+			<p>②貸しを追加</p>
 			<input id="itemname" type="text"/>
 			について、
 			<select id="kariname" multiple="true" size="3" style="width:80px" onchange="selectedIndex=selectedIndex;"></select>
@@ -40,7 +42,7 @@
 			に
 			<input id="money" type="text"/>円返す
 
-			<input type="button" id ="buttonAdd" class="btn btn-primary" value="追加"/>
+			<input type="button" id ="buttonAdd" class="btn btn-primary btn-sm" value="追加"/>
 		</div>
 
 		<div class="content">
@@ -57,10 +59,9 @@
 			<div class="content">
 				<p>割り算(おまけ)</p>
 				<input id="calc_money" type="text"/>円を<br/>
-				<input type="button" id ="buttonDiv2" class="btn btn-default" value="2で割る"/>
-				<input type="button" id ="buttonDiv3" class="btn btn-default" value="3で割る"/><br/>
-				?<br/>
-				<input id="calc_dest" type="text"/>円
+				<input type="button" id ="buttonDiv2" class="btn btn-info btn-sm" value="2で割る"/>
+				<input type="button" id ="buttonDiv3" class="btn btn-info btn-sm" value="3で割る"/><br/>
+				　⇒　<input id="calc_dest" type="text"/>円
 			</div>
 		</div>
 	</div>

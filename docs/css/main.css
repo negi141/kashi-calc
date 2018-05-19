@@ -4,14 +4,11 @@ body {
 }
 p {
 	font-weight:bold;
+	margin-top: 4px;
+    margin-bottom: 1px;
 }
-#header {
-	background: #f0f9ff;
-	border: none;
-	padding: 9px;
-	border-radius: 4px;
-	font-size: 14px;
-	box-shadow: 3px 3px 0 rgba(8, 1, 2, 0.03);
+.header {
+	background: #f0f9ff !important;
 }
 #footer {
 	text-align:center;
@@ -19,13 +16,25 @@ p {
 }
 .content{
 	background:#FFF;
-	border: solid 1px #bbb;
+	border: solid 1px #ddd;
 	border-radius: 5px;
 	padding: 5px;
+	margin: 4px 4px 6px 0px;
+	box-shadow: 3px 3px 0 rgba(8, 1, 2, 0.03);
 }
-#itemname{width:120px;}
-#divList{color:#88c}
-#divDest{color:#00f;
-background-color:#ffd}
-#calc_money{width:80px}
-#money{width:80px}
+#itemname{
+   width:120px;
+}
+#divList{
+   color:#88c
+}
+#divDest{
+   color:#00f;
+	background-color:#ffd
+}
+#calc_money{
+   width:80px
+}
+#money{
+   width:80px
+}
