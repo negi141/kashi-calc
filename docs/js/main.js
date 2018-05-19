@@ -14,20 +14,31 @@ $(function(){
 			return;
 		}
 		users.push(userName);
-		$('#kariname').append($('<option>').html(userName).val(userName));
-		$('#kashiname').append($('<option>').html(userName).val(userName));
+		var id = users.length;
+		var createRadio = function(name) {
+			var label = '<label for="'+name+id+'">' + userName + '</label>';
+			var radio = '<input type="radio" name="'+name+'name" id="'+name+id+'" value="'+userName+'">' + label + '<br>';
+			return radio;
+		};
+		$('#kariname').append(createRadio("kari"));
+		$('#kashiname').append(createRadio("kashi"));
 		$('#addUserName').val("");
 	});
 
 	//貸しボタン
 	$('#buttonAdd').click(function (){
 		//エラーチェック
-		if ($("#kariname").val() == null || $("#kashiname").val() == null)
+		if ($("#itemname").val() == "")
+		{
+			alert("○○代を入力してください");
+			return;
+		}
+		if ($("input[name='kariname']:checked").val() == undefined || $("input[name='kashiname']:checked").val() == undefined)
 		{
 			alert("名前を選択してください");
 			return;
 		}
-		if ($("#kariname").val()+"" === $("#kashiname").val()+"")
+		if ($("input[name='kariname']:checked").val() === $("input[name='kashiname']:checked").val())
 		{
 			alert("名前を左右で変えてください");
 			return;
@@ -42,7 +53,12 @@ $(function(){
 			alert("円は数字にしてください");
 			return;
 		}
-		var item = {"itemname": $("#itemname").val(), "kariname":$("#kariname").val()+"", "kashiname":$("#kashiname").val()+"", "money":$("#money").val()}//
+		var item = {
+			"itemname": $("#itemname").val(), 
+			"kariname": $("input[name='kariname']:checked").val(),
+			"kashiname": $("input[name='kashiname']:checked").val(),
+			"money": $("#money").val()
+		}
 		items.push(item);
 		listshow();
 		destshow();
@@ -51,7 +67,7 @@ $(function(){
 	var listshow = function(){
 		var message = "";
 		for (var i=0 ; i<items.length ; i++){
-			message += Format("{0}について、{1}は{2}に{3}円返す<br/>", items[i].itemname, items[i].kariname, items[i].kashiname, items[i].money);
+			message += Format(" ・{0}について、{1}は{2}に{3}円返す<br/>", items[i].itemname, items[i].kariname, items[i].kashiname, items[i].money);
 		}
 		$("#divList").html(message)
 	}
@@ -85,6 +101,11 @@ $(function(){
 	}
 	//割り算
 	var calc = function(div){
+		if ($("#calc_money").val() == "")
+		{
+			alert("円を入力してください");
+			return;
+		}
 		$("#calc_dest").val(Math.round($("#calc_money").val() / div));
 	}
 	
@@ -95,5 +116,4 @@ $(function(){
 	$('#buttonDiv3').click(function (){
 		calc(3);
 	});
-
 });

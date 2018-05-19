@@ -34,22 +34,21 @@
 
 		<div class="content">
 			<p>②"貸し"を追加する</p>
-			<input id="itemname" type="text" placeholder="○○代"/>
-			について、
-			<select id="kariname" multiple="true" size="3" style="width:80px" onchange="selectedIndex=selectedIndex;"></select>
+			<input id="itemname" type="text" placeholder="○○代"/>について、
+			<span id="kariname" class="block"></span>
 			は
-			<select id="kashiname" multiple="true" size="3" style="width:80px" onchange="selectedIndex=selectedIndex;"></select>
+			<span id="kashiname" class="block"></span>
 			に
 			<input id="money" type="text" placeholder="半角数字"/>円返す
 			<input type="button" id ="buttonAdd" class="btn btn-primary btn-sm" value="追加する"/>
 		</div>
 
 		<div class="content">
-			<p>集計結果(相殺済み)</p>
-			<div id="divDest"></div>
+			<p>■ 集計結果(相殺済み)</p>
+			<div id="divDest"> ―</div>
 
-			<p>貸し一覧</p>
-			<div id="divList"></div>
+			<p>■ 貸し一覧</p>
+			<div id="divList"> ―</div>
 		</div>
 		</div>
 	

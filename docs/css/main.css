@@ -5,8 +5,8 @@ body {
 p {
 	color: #555;
 	font-weight:bold;
-	margin-top: 5px;
-    margin-bottom: 2px;
+	margin-top: 7px;
+    margin-bottom: 4px;
 }
 .header {
 	background: #f0f9ff !important;
@@ -19,9 +19,16 @@ p {
 	background:#FFF;
 	border: solid 1px #d8d8d8;
 	border-radius: 4px;
-	padding: 5px;
-	margin: 6px 4px 8px 0px;
+	padding: 7px;
+	margin: 7px 5px 9px 2px;
 	box-shadow: 3px 3px 0 rgba(8, 1, 2, 0.03);
+}
+.block {
+	display: inline-block;
+	min-width: 80px;
+	border: solid 1px #eee;
+	margin:3px 0 3px 0;
+	padding:2px;
 }
 #itemname{
    width:120px;
