@@ -32,7 +32,7 @@ p {
    color:#00f;
 	background-color:#ffd
 }
-#calc_money{
+#calc_money, #calc_dest{
    width:80px
 }
 #money{
