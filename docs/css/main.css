@@ -1,0 +1,16 @@
+body {
+	margin-top:5px;
+	background:#f5f5f5;
+}
+p {
+	background:#ddeeff;
+	font-weight:bold;
+}
+#footer {
+	text-align:center;
+	color:#999;
+}
+.content{
+	background:#FFF;
+}
+#itemname{width:120px;}
